@@ -1,0 +1,448 @@
+/*Null Style*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-tex-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+#title {
+  text-align: center;
+  padding: 1rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  align-items: top;
+  justify-content: center;
+  background: url("https://i.ibb.co/gJWYXB9/mount-fuji-1920x1080-lake-kawaguchiko-japan-hd-4k-5909.jpg") center/cover no-repeat fixed;
+}
+
+body.dark {
+  background: url("https://i.ibb.co/VvGfKNz/mount-fuji-1920x1080-twilight-lake-japan-4k-5267.jpg") center/cover no-repeat fixed;
+}
+
+.change {
+  transition: 1s linear;
+}
+
+.change.dark {
+  background-color: gray;
+  color: white;
+  cursor: default;
+  border: 1px solid #DCDCDC;
+  transition: 1s linear;
+}
+.change.dark::placeholder {
+  color: white;
+}
+.change.dark::-moz-placeholder {
+  color: white;
+}
+
+.list_label.dark:before {
+  background: #D3D3D3;
+}
+.list_label.dark:after {
+  background: #8B4513;
+}
+
+.dark_toggle {
+  position: absolute;
+  top: 25px;
+  left: 80vw;
+  opacity: 0;
+}
+
+.dark_toggle:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.label {
+  height: 26px;
+  width: 50px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  right: 5vw;
+}
+
+.fa-moon-o {
+  color: #87CEFA;
+}
+
+.fa-sun-o {
+  color: #DAA520;
+}
+
+.ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.header {
+  margin-top: 1rem;
+  max-width: 60vw;
+}
+.header p {
+  text-align: center;
+  padding: 0 1rem 1rem 1rem;
+}
+.header h1 {
+  font-size: 2rem;
+}
+
+.form_container {
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 0.7rem;
+  background-color: rgba(255, 140, 0, 0.8);
+}
+
+#survey-form {
+  padding: 0 8%;
+}
+#survey-form .input {
+  height: 2.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+#survey-form label {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.button_wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 1vw 3vw;
+  grid-template-areas: "check like" "check recommend";
+  margin: 1rem 0 2rem 0;
+}
+
+fieldset {
+  border: 1px solid #000;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+fieldset #like {
+  width: 60%;
+}
+fieldset p {
+  line-height: 1.8rem;
+}
+
+#check {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: check;
+}
+
+#like {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: like;
+  width: 85%;
+  margin-top: 1rem;
+}
+
+#recommend {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: recommend;
+  width: 85%;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-size: 1rem;
+}
+
+.check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.check + label, .radio + label {
+  position: relative;
+  padding: 0 0 0 1.2rem;
+  cursor: pointer;
+}
+
+.check + label:before {
+  content: "";
+  top: 5px;
+  position: absolute;
+  left: -4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background: white;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.check + label:after {
+  content: "";
+  top: 8px;
+  position: absolute;
+  left: -0.1rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #423106;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.check:checked + label:after {
+  opacity: 1;
+}
+
+.radio + label:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -3px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: white;
+}
+
+.radio + label:after {
+  content: "";
+  top: 8px;
+  position: absolute;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #423106;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.radio:checked + label:after {
+  opacity: 1;
+}
+
+@media (max-width: 1080px) {
+  body {
+    background: url("https://i.ibb.co/XZrRphS/mount-fuji-1080x1920-lake-kawaguchiko-japan-hd-4k-5909.jpg") center/cover no-repeat fixed;
+  }
+
+  fieldset {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .check {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .radio {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    background: url("https://i.ibb.co/LJWJczs/mount-fuji-768x1024-lake-kawaguchiko-japan-hd-4k-5909.jpg") center/cover no-repeat fixed;
+  }
+
+  .button_wrapper {
+    display: block;
+  }
+
+  fieldset {
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    margin: 1rem 0;
+  }
+
+  .check {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .radio {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  #submit, #reset {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background: url("https://i.ibb.co/DLbsTwL/mount-fuji-480x800-lake-kawaguchiko-japan-hd-4k-5909.jpg") center/cover no-repeat fixed;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  legend {
+    font-size: 1rem;
+  }
+
+  #survey-form label {
+    font-size: 1rem;
+  }
+
+  .button_wrapper {
+    display: block;
+  }
+
+  fieldset {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    margin: 0.7rem 0;
+  }
+
+  .check {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .radio {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem !important;
+  }
+}
+#textarea {
+  width: 100%;
+  height: 20vh;
+  border: 1px solid #000;
+  padding: 0.5rem;
+  border-radius: 7px;
+}
+
+#submit_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit, #reset {
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.2rem;
+  margin-top: 1vh;
+}
+
+#reset {
+  margin-right: 5%;
+  background-color: #E9967A;
+}
+
+#submit {
+  background-color: #8FBC8F;
+}
