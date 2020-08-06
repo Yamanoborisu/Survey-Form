@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"> 
+	<script src="https://use.fontawesome.com/490a1e51a3.js"></script>
+</head>
+
+<body>
+<div>
+<input type="checkbox" class="dark_toggle" id="dark_toggle">
+<label for="dark_toggle" class="label">
+	<i class="fa fa-moon-o"></i>
+	<i class="fa fa-sun-o"></i>
+	<div class="ball"></div>
+</label>
+</div>
+
+<main class="main">
+<div class="header">
+	<h1 id="title">Tour Review</h1>
+	<p id="description">If you have a couple of minutes and want to help us improve our service</p>
+</div>	
+
+
+<div class="form_container">
+<form action="#" method="post" id="survey-form">
+
+<label for="name" id="name-label">Full Name</label><br>
+<input class="input change" type="text" id="name" name="fname" placeholder="Enter your name" required><br>
+
+<label for="email" id="email-label">Email:</label><br>
+<input class="input change" type="email" id="email" name="email" placeholder="Enter your Email" required><br>
+	
+<label for="number" id="number-label">Age</label><br>
+<input class="input change" type="number" id="number" name="quantity" min="1" max="150" placeholder="Age" required><br>
+
+<label for="dropdown" id="dropdown-label">Guide was</label><br>
+<select class="input change" name="guide_name" id="dropdown" required title="Guide name">
+	<option disabled selected>Select guide name</option>
+	<option value="chumakov">Chumakov Boris</option>
+	<option value="frinken">Oks Frinken</option>
+	<option value="gris">Sergey Gris</option>
+</select>
+
+<div class="button_wrapper">
+
+<fieldset id="check" required>
+<legend>Places you visited</legend>
+<p><input type="checkbox" name="hokkaido" value="true" autocomplete='off' class="check" id="hokkaido">
+<label for="hokkaido" class="list_label">Hokkaido</label></p>
+<p><input type="checkbox" name="tamagawa" value="true" autocomplete='off' class="check" id="tamagawa">
+<label for="tamagawa" class="list_label">Tamagawa</label></p>
+<p><input type="checkbox" name="tokyo" value="true" autocomplete='off' class="check" id="tokyo">
+<label for="tokyo" class="list_label">Tokyo</label></p>
+<p><input type="checkbox" name="kyoto" value="true" autocomplete='off' class="check" id="kyoto">
+<label for="kyoto" class="list_label">Kyoto</label></p>
+<p><input type="checkbox" name="osaka" value="true" autocomplete='off' class="check" id="osaka">
+<label for="osaka" class="list_label">Osaka</label></p>
+<p><input type="checkbox" name="hiroshima" value="true" autocomplete='off' class="check" id="hiroshima">
+<label for="hiroshima" class="list_label">Hiroshima</label></p>
+<p><input type="checkbox" name="beppu" value="true" autocomplete='off' class="check" id="beppu">
+<label for="beppu" class="list_label">Beppu</label></p>
+<p><input type="checkbox" name="okinawa" value="true" autocomplete='off' class="check" id="okinawa">
+<label for="okinawa" class="list_label">Okinawa</label></p>
+</fieldset>
+
+<fieldset id="like" required>
+<legend>Did you like your trip?</legend>
+<p><input type="radio" name="like" value="yes" autocomplete='off' class="radio" id="yes">
+<label for="yes" class="list_label">Very!</label></p>
+<p><input type="radio" name="like" value="not" autocomplete='off' class="radio" id="notsomuch">
+<label for="notsomuch" class="list_label">Not so much</label></p>
+</fieldset>
+
+<fieldset id="recommend" required>
+<legend>Will you recomend us to your friends?</legend>
+<p><input type="radio" name="recommend" value="yes" autocomplete='off' class="radio" id="strongly">
+<label for="strongly" class="list_label">Strongly!</label></p>
+<p><input type="radio" name="recommend" value="not" autocomplete='off' class="radio" id="notsure">
+<label for="notsure" class="list_label">Not sure</label></p>
+</fieldset>
+</div>
+
+
+<div class="texarea_wrap">
+<textarea placeholder="Some additional comments" name="texarea" id="textarea" class="change">
+</textarea>
+</div>
+
+<div id="submit_wrap">
+<button type="reset" id="reset">Resest</button>
+<button type="submit" id="submit">Submit</button>
+</div>
+</form>
+</div>
+
+</main>
+<footer>
+	
+</footer>
+	
+</body>
+
+<script src="JS/theme_change.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
